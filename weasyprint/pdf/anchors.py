@@ -246,7 +246,11 @@ def add_forms(forms, matrix, pdf, page, resources, stream, font_map):
                 'Flags': flags,
             })
             pdf.add_object(field)
-
+        elif input_type == 'signature':
+            # Signature field
+            field['FT'] = '/Sig'
+            field['Ff'] = 0
+            pdf.add_object(field)
         else:
             # Text, password, textarea, files, and other unknown fields.
             font_description = get_font_description(style)

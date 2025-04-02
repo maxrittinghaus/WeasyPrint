@@ -563,6 +563,7 @@ def test_cmap_rtl():
     ('<input>', ['/Tx', '/V ()']),
     ('<input value="">', ['/Tx', '/V ()']),
     ('<input type="checkbox">', ['/Btn']),
+    ('<input type="signature">', ['/Sig']),
     ('<input type="radio">',
      ['/Btn', '/V /Off', '/AS /Off', '/Ff 49152']),
     ('<input checked type="radio" name="foo" value="value">',
